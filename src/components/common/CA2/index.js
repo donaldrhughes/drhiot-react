@@ -1,5 +1,5 @@
 import React from 'react';
-import image from '../../../assets/images/Wifi.png'
+import image from '../../../assets/images/communication.jpg'
 
 //Components
 import { makeStyles } from '@material-ui/core/styles';
@@ -28,10 +28,10 @@ export default function CA() {
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-          Web and Mobile
+            Tech Focus
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-          Front-end development, database design, and server-side programming are the essential components of my projects. Javascript ES6 is my favorite scripting language.
+          My background is information technology and web design. I have worked in the technology industry for over 20 years on the technical and business sides of the house. I have a passion for continuously learning. My current technology interests are: website security, token authentication, server-side validation, and Etherium smart contracts (Solidity).
           </Typography>
         </CardContent>
       </CardActionArea>

@@ -1,8 +1,12 @@
 import React from 'react';
 
+//Components
 import { Menu, MenuItem, Button } from '@material-ui/core/';
+import { makeStyles } from '@material-ui/core/styles';
+
 
 export default function Nav() {
+    const classes = useStyles();
     const [anchorEl, setAnchorEl] = React.useState(null);
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);
@@ -13,7 +17,7 @@ export default function Nav() {
     };
     return (
         <div>
-            <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
+            <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick} className={classes.root}>
                 Menu
       </Button>
             <Menu
@@ -30,3 +34,10 @@ export default function Nav() {
         </div>
     )
 }
+
+
+const useStyles = makeStyles({
+    root: {
+      maxWidth: 200
+    }
+  });

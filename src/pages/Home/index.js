@@ -9,6 +9,8 @@ import { Paper, Grid } from '@material-ui/core/';
 import Nav from '../../components/Nav'
 import Logo from '../../components/common/Logo'
 import CA from '../../components/common/CA'
+import CA2 from '../../components/common/CA2'
+import CA3 from '../../components/common/CA3'
 
 //Contexts
 // import { MainContext } from '../../contexts/MainContext'
@@ -22,7 +24,20 @@ const useStyles = makeStyles((theme) => ({
         padding: theme.spacing(1),
         textAlign: 'center',
         color: theme.palette.text.secondary,
+        marginLeft: "2%",
+        marginRight: "2%"
     },
+    nav: {
+        padding: theme.spacing(1),
+        textAlign: 'center',
+        color: theme.palette.text.secondary,
+        minWidth: 60,
+        position: "absolute",
+        top: 0,
+        right: 0,
+        marginRight: "2%",
+        marginTop: "1%"
+    }
 }));
 
 export default function Home() {
@@ -35,8 +50,10 @@ export default function Home() {
                 <Grid item xs={6}>
                     <Logo />
                 </Grid>
-                <Grid item xs={2}>
-                    <Paper className={classes.paper}><Nav /></Paper>
+                <Grid item xs={2} >
+                    <Paper className={classes.nav}>
+                        <Nav />
+                        </Paper>
                 </Grid>
                 {/* <Grid item xs={2}>
                     <Paper className={classes.paper}>Quick</Paper>
@@ -75,10 +92,10 @@ export default function Home() {
                     <Paper className={classes.paper}><CA /></Paper>
                 </Grid>
                 <Grid item xs={4}>
-                    <Paper className={classes.paper}>Card2</Paper>
+                    <Paper className={classes.paper}><CA2 /></Paper>
                 </Grid>
                 <Grid item xs={4}>
-                    <Paper className={classes.paper}>Card3</Paper>
+                    <Paper className={classes.paper}><CA3 /></Paper>
                 </Grid>
             </React.Fragment>
         );

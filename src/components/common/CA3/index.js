@@ -1,5 +1,5 @@
 import React from 'react';
-import image from '../../../assets/images/Wifi.png'
+import image from '../../../assets/images/data.jpg'
 
 //Components
 import { makeStyles } from '@material-ui/core/styles';
@@ -28,10 +28,10 @@ export default function CA() {
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-          Web and Mobile
+            Continuous Integration
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-          Front-end development, database design, and server-side programming are the essential components of my projects. Javascript ES6 is my favorite scripting language.
+          Communication and maintaining detailed documentation is my secret to success. I am always open to Client's feedback, guidance, and ideas.
           </Typography>
         </CardContent>
       </CardActionArea>
