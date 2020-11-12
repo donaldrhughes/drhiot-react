@@ -1,93 +1,116 @@
-import React, { useContext } from 'react';
+import React from 'react';
+// import React, { useContext } from 'react';
 import "../../App.scss";
 import "./home.scss";
 
 //Components
 import { makeStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
-import Grid from '@material-ui/core/Grid';
+import { Paper, Grid } from '@material-ui/core/';
+import Nav from '../../components/Nav'
+import Logo from '../../components/common/Logo'
+import CA from '../../components/common/Card'
 
 //Contexts
-import { MainContext } from '../../contexts/MainContext'
+// import { MainContext } from '../../contexts/MainContext'
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-  },
-  paper: {
-    padding: theme.spacing(1),
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
-  },
+    root: {
+        flexGrow: 1,
+    },
+    paper: {
+        padding: theme.spacing(1),
+        textAlign: 'center',
+        color: theme.palette.text.secondary,
+    },
 }));
 
 export default function Home() {
-  const classes = useStyles();
-  const MC = useContext(MainContext);
+    const classes = useStyles();
+    // const MC = useContext(MainContext);
 
-  function FormRow() {
+    function FormRow() {
+        return (
+            <React.Fragment>
+                <Grid item xs={4}>
+                    <Paper className={classes.paper}><Logo /></Paper>
+                </Grid>
+                <Grid item xs={4}>
+                    <Paper className={classes.paper}><Nav /></Paper>
+                </Grid>
+                <Grid item xs={4}>
+                    <Paper className={classes.paper}>Quick</Paper>
+                </Grid>
+            </React.Fragment>
+        );
+    }
+
+    function BodyRow() {
+        return (
+            <React.Fragment>
+                <Grid item xs={12}>
+                    <Paper className={classes.paper}>Body</Paper>
+                </Grid>
+                <Grid item xs={12}>
+                    <Paper className={classes.paper}>The Internet of Things is all around us and so many technologies are now bundled within its confines. It could include your internet enabled refrigerator in the kitchen to entire cities. Automobiles, the routes they drive on, and the robots that operate them are integrated together on this technological marvel using the IPv6 internet protocol. The IPv6 protocol allows for a vast increase in the number of addresses which are available for these devices to operate independently. Some of these devices are now operating on next-generation data structures, know as blockchains. These blockchains contain immutable data security measures that make it incredibly difficult to modify the contents. This new use case for data ensures that trust is an integral part of the structure. This keeps data accurate and removes the need for centralized control.</Paper>
+                </Grid>
+            </React.Fragment>
+        );
+    }
+
+    function FootRow() {
+        return (
+            <React.Fragment>
+                <Grid item xs={12}>
+                    <Paper className={classes.paper}>Foot</Paper>
+                </Grid>
+            </React.Fragment>
+        );
+    }
+
+    function CardRow() {
+        return (
+            <React.Fragment>
+                <Grid item xs={4}>
+                    <Paper className={classes.paper}><CA /></Paper>
+                </Grid>
+                <Grid item xs={4}>
+                    <Paper className={classes.paper}>Card2</Paper>
+                </Grid>
+                <Grid item xs={4}>
+                    <Paper className={classes.paper}>Card3</Paper>
+                </Grid>
+            </React.Fragment>
+        );
+    }
+
     return (
-      <React.Fragment>
-        <Grid item xs={4}>
-          <Paper className={classes.paper}>Logo</Paper>
-        </Grid>
-        <Grid item xs={4}>
-          <Paper className={classes.paper}>NAV</Paper>
-        </Grid>
-        <Grid item xs={4}>
-          <Paper className={classes.paper}>Body</Paper>
-        </Grid>
-      </React.Fragment>
-    );
-  }
+        <div>
+  
+   <div className={classes.root}>
+            <Grid container spacing={1}>
+                <Grid container item xs={12} spacing={3}>
+                    <FormRow />
+                
+                </Grid>
+                <Grid container item xs={12} spacing={3}>
+                    <BodyRow />
+                </Grid>
+                <Grid container item xs={12} spacing={3}>
+                    <CardRow />
+                </Grid>
+                <Grid container item xs={12} spacing={3}>
+                    <FootRow />
+                </Grid>
+            </Grid>
+        </div>
 
-  return (
-    <div className={classes.root}>
-      <Grid container spacing={1}>
-        <Grid container item xs={12} spacing={3}>
-          <FormRow />
-        </Grid>
-        <Grid container item xs={12} spacing={3}>
-          <FormRow />
-        </Grid>
-        <Grid container item xs={12} spacing={3}>
-          <FormRow />
-        </Grid>
-      </Grid>
-    </div>
-  );
+        </div>
+
+
+       
+    );
 }
 
-// import React, { Component } from "react";
-
-
-// 
-// import { Grid } from '@material-ui/core';
-// import { Paper } from '@material-ui/core';
-// import { makeStyles } from '@material-ui/core/styles';
-
-// 
-
-
-// export default class Home extends Component {
-//     static contextType = MainContext;
-
-//     render() {
-//         return (
-//             <Grid container spacing={1}>
-//                 <Grid item xs={4} style={bgStyle}>
-//                     1
-//         </Grid>
-//                 <Grid item xs={4} style={bgStyle}>
-//                     2
-//         </Grid>
-//                 <Grid item xs={4} style={bgStyle}>
-//                     3
-//         </Grid>
-//             </Grid>
-//         );
-//     }
-// }
 
 // const bgStyle = {
 //     background: "grey",
