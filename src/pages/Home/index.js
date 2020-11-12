@@ -35,12 +35,12 @@ export default function Home() {
                 <Grid item xs={6}>
                     <Logo />
                 </Grid>
-                <Grid item xs={4}>
+                <Grid item xs={2}>
                     <Paper className={classes.paper}><Nav /></Paper>
                 </Grid>
-                <Grid item xs={2}>
+                {/* <Grid item xs={2}>
                     <Paper className={classes.paper}>Quick</Paper>
-                </Grid>
+                </Grid> */}
             </React.Fragment>
         );
     }
@@ -62,7 +62,7 @@ export default function Home() {
         return (
             <React.Fragment>
                 <Grid item xs={12}>
-                    <Paper className={classes.paper}>Foot</Paper>
+                    <Paper className={classes.paper}>Copyright 2020. All Rights Reserved.</Paper>
                 </Grid>
             </React.Fragment>
         );
@@ -85,13 +85,11 @@ export default function Home() {
     }
 
     return (
-        <div>
-  
-   <div className={classes.root}>
+        <div className={classes.root}>
             <Grid container spacing={1}>
-                <Grid container item xs={12} spacing={3}>
+                <Grid container item xs={12} spacing={3} justify="space-between"
+                    alignItems="center">
                     <FormRow />
-                
                 </Grid>
                 <Grid container item xs={12} spacing={3}>
                     <BodyRow />
@@ -104,11 +102,6 @@ export default function Home() {
                 </Grid>
             </Grid>
         </div>
-
-        </div>
-
-
-       
     );
 }
 
