@@ -23,7 +23,7 @@ export default function Nav() {
                 open={Boolean(anchorEl)}
                 onClose={handleClose}
             >
-                <MenuItem onClick={handleClose}>Prortfolio</MenuItem>
+                <MenuItem onClick={handleClose}>Portfolio</MenuItem>
                 <MenuItem onClick={handleClose}>About</MenuItem>
                 {/* <MenuItem onClick={handleClose}>Logout</MenuItem> */}
             </Menu>
