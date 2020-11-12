@@ -8,7 +8,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { Paper, Grid } from '@material-ui/core/';
 import Nav from '../../components/Nav'
 import Logo from '../../components/common/Logo'
-import CA from '../../components/common/Card'
+import CA from '../../components/common/CA'
 
 //Contexts
 // import { MainContext } from '../../contexts/MainContext'
@@ -16,6 +16,7 @@ import CA from '../../components/common/Card'
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
+        backgroundColor: 'grey'
     },
     paper: {
         padding: theme.spacing(1),
@@ -31,13 +32,13 @@ export default function Home() {
     function FormRow() {
         return (
             <React.Fragment>
-                <Grid item xs={4}>
-                    <Paper className={classes.paper}><Logo /></Paper>
+                <Grid item xs={6}>
+                    <Logo />
                 </Grid>
                 <Grid item xs={4}>
                     <Paper className={classes.paper}><Nav /></Paper>
                 </Grid>
-                <Grid item xs={4}>
+                <Grid item xs={2}>
                     <Paper className={classes.paper}>Quick</Paper>
                 </Grid>
             </React.Fragment>

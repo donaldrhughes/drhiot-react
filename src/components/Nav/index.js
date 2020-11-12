@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Menu, MenuItem, Button } from '@material-ui/core/';
 
-export default function  Nav() {
+export default function Nav() {
     const [anchorEl, setAnchorEl] = React.useState(null);
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);
@@ -14,7 +14,7 @@ export default function  Nav() {
     return (
         <div>
             <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
-                Open Menu
+                Menu
       </Button>
             <Menu
                 id="simple-menu"
@@ -23,9 +23,9 @@ export default function  Nav() {
                 open={Boolean(anchorEl)}
                 onClose={handleClose}
             >
-                <MenuItem onClick={handleClose}>Profile</MenuItem>
-                <MenuItem onClick={handleClose}>My account</MenuItem>
-                <MenuItem onClick={handleClose}>Logout</MenuItem>
+                <MenuItem onClick={handleClose}>Prortfolio</MenuItem>
+                <MenuItem onClick={handleClose}>About</MenuItem>
+                {/* <MenuItem onClick={handleClose}>Logout</MenuItem> */}
             </Menu>
         </div>
     )

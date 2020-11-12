@@ -8,11 +8,12 @@ import { Card, CardActionArea, CardMedia } from '@material-ui/core/';
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: 225,
+    maxWidth: 205,
   },
   media: {
-    width: 200,
-    maxWidth: 200,
+    // width: 200,
+    maxWidth: 205,
+    // minWidth: 205,
     height: 100,
   },
 });
@@ -21,7 +22,8 @@ export default function LogoCard() {
   const classes = useStyles();
 
   return (
-    <Card className={classes.root}>
+    <div>
+  
       <CardActionArea>
         <CardMedia
           className={classes.media}
@@ -31,6 +33,7 @@ export default function LogoCard() {
         
       </CardActionArea>
       
-    </Card>
+
+    </div>
   );
 }
