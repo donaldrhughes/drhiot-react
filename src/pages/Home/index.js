@@ -25,7 +25,6 @@ const useStyles = makeStyles((theme) => ({
         textAlign: 'justify',
         color: theme.palette.text.secondary,
         marginLeft: "2%",
-        // marginRight: "2%"
     },
     bodyRow: {
         padding: theme.spacing(1),
@@ -36,19 +35,11 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: "lightsteelblue"
     },
     header: {
-        // padding: theme.spacing(1),
         textAlign: 'center',
         color: "blue",
-        // marginLeft: "2%",
         marginRight: 0,
         marginLeft: "1%",
         backgroundColor: "lightskyblue"
-    },
-    footer: {
-        padding: theme.spacing(1),
-        textAlign: 'center',
-        color: "#EEE",
-        backgroundColor: "navy"
     },
     footer: {
         padding: theme.spacing(1),
@@ -112,7 +103,7 @@ export default function Home() {
         return (
             <React.Fragment>
                 <Grid item xs={12}>
-                    <Paper className={classes.footer}>Copyright 2020, drhIoT. All Rights Reserved. Powered by the <a href="http://www.reactjs.org" className={classes.footLink}>React JS Framwork.</a></Paper>
+                    <Paper className={classes.footer}>Copyright 2020, drhIoT. All Rights Reserved. Powered by the <a href="http://www.reactjs.org" className={classes.footLink}>React JS Framework.</a></Paper>
                 </Grid>
             </React.Fragment>
         );

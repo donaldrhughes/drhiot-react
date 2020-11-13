@@ -3,7 +3,9 @@ import image from '../../../assets/images/Wifi.png'
 
 //Components
 import { makeStyles } from '@material-ui/core/styles';
-import { Card, CardActionArea, CardActions, CardContent, CardMedia, Button, Typography } from '@material-ui/core/';
+import { Card, CardActionArea, CardActions, CardContent, CardMedia, 
+  // Button, 
+  Typography } from '@material-ui/core/';
 
 
 const useStyles = makeStyles({
@@ -24,24 +26,23 @@ export default function CA() {
         <CardMedia
           className={classes.media}
           image={image}
-          title="Image"
-        />
+          title="Image"/>
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
           Web and Mobile
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-          Front-end development, database design, and server-side programming are the essential components of my projects. Javascript ES6 is my favorite scripting language.
+          Full Stack Development and Database Design are the essential technology components to successfully completing milestones for Clients. Web and Mobile projects are welcomed!
           </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary">
+        {/* <Button size="small" color="primary">
           Share
         </Button>
         <Button size="small" color="primary">
           Learn More
-        </Button>
+        </Button> */}
       </CardActions>
     </Card>
   );

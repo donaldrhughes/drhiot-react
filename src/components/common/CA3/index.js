@@ -3,7 +3,9 @@ import image from '../../../assets/images/data.jpg'
 
 //Components
 import { makeStyles } from '@material-ui/core/styles';
-import { Card, CardActionArea, CardActions, CardContent, CardMedia, Button, Typography } from '@material-ui/core/';
+import { Card, CardActionArea, CardActions, CardContent, CardMedia, 
+  // Button, 
+  Typography } from '@material-ui/core/';
 
 
 const useStyles = makeStyles({
@@ -31,17 +33,17 @@ export default function CA() {
             Continuous Integration
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-          Communication and maintaining detailed documentation is my secret to success. I am always open to Client's feedback, guidance, and ideas.
+          Requirements gathering, Communication, Periodic Review, and Stakeholder Inclusion are the keys to success.
           </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary">
+        {/* <Button size="small" color="primary">
           Share
         </Button>
         <Button size="small" color="primary">
           Learn More
-        </Button>
+        </Button> */}
       </CardActions>
     </Card>
   );
