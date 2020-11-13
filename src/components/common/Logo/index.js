@@ -27,13 +27,17 @@ const useStyles = makeStyles({
   root: {
     maxWidth: 225,
     textAlign: "center",
-    margin: "2%"
+    margin: "2%",
+   
+    backgroundColor: "#DDD"
   },
   media: {
     // width: 200,
     maxWidth: 205,
     // minWidth: 205,
-    margin: "2%",
+    margin: "1%",
     height: 100,
+    padding: "1%",
+    // backgroundColor: "#DDD"
   },
 });

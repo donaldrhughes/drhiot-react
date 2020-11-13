@@ -35,9 +35,10 @@ export default function Nav() {
     )
 }
 
-
 const useStyles = makeStyles({
     root: {
-      maxWidth: 200
+      maxWidth: 200,
+      color: "#EEE",
+      fontSize: 16
     }
   });
