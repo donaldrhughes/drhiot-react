@@ -1,4 +1,5 @@
 import React from 'react';
+import { useHistory } from "react-router-dom";
 
 //Components
 import { Menu, MenuItem, Button } from '@material-ui/core/';
@@ -6,6 +7,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 
 export default function Nav() {
+    let history = useHistory();
     const classes = useStyles();
     const [anchorEl, setAnchorEl] = React.useState(null);
     const handleClick = (event) => {
@@ -15,6 +17,22 @@ export default function Nav() {
     const handleClose = () => {
         setAnchorEl(null);
     };
+
+    const linkHome = event => {
+        event.preventDefault();
+        history.push("/");
+    };
+
+    const linkAbout = event => {
+        event.preventDefault();
+        history.push("/about");
+    };
+
+    const linkPortfolio = event => {
+        event.preventDefault();
+        history.push("/portfolio");
+    };
+
     return (
         <div>
             <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick} className={classes.root}>
@@ -25,11 +43,10 @@ export default function Nav() {
                 anchorEl={anchorEl}
                 keepMounted
                 open={Boolean(anchorEl)}
-                onClose={handleClose}
-            >
-                <MenuItem onClick={handleClose}>Portfolio</MenuItem>
-                <MenuItem onClick={handleClose}>About</MenuItem>
-                {/* <MenuItem onClick={handleClose}>Logout</MenuItem> */}
+                onClose={handleClose}>
+                <MenuItem onClick={linkHome} type="submit">Home</MenuItem>
+                <MenuItem onClick={linkPortfolio} type="submit">Portfolio</MenuItem>
+                <MenuItem onClick={linkAbout} type="submit">About</MenuItem>
             </Menu>
         </div>
     )
@@ -37,8 +54,8 @@ export default function Nav() {
 
 const useStyles = makeStyles({
     root: {
-      maxWidth: 200,
-      color: "#EEE",
-      fontSize: 16
+        maxWidth: 200,
+        color: "#EEE",
+        fontSize: 16
     }
-  });
+});
