@@ -95,9 +95,9 @@ export default function Home() {
                 <Grid item xs={12}>
                     <Paper className={classes.bodyRow}>
                         <ul>
-                            <li>--React / React-Native (Redux / Context, Hooks), Node (Express), AJAX / JSON, Javascript ES6</li>
-                            <li>--Oracle Java 8, JQuery, PHP, XML, HTML, SCSS</li>
-                            <li> --TypeScript, Cordova, Phonegap, Ionic, Regex,  Python, Angular</li>
+                            <li><b>React / React-Native </b>(Redux / Context, Hooks), Node (Express), AJAX / JSON, Javascript ES6</li>
+                            <li><b>Oracle Java 8</b>, JQuery, PHP, XML, HTML, SCSS</li>
+                            <li> TypeScript, Cordova, Phonegap, Ionic, Regex,  Python, Angular</li>
                             <li>Object Oriented Programming, Functional Programming, Agile, BIG O(n), Authentication, SaaS, OSI, CLI, Data Structures, TDD, MVC</li>
                         </ul>
                     
