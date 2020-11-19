@@ -92,7 +92,8 @@ export default function About() {
                     <Paper className={classes.bodyRow}>
                     The Internet of Things is all around us and so many technologies are now bundled within the applications that use it. It
                     could include anything from your internet enabled refrigerator to entire cities. Automobiles, the
-                    routes they drive on, and robots which operate them are integrated together using the IPv6 internet protocol. 
+                    routes they drive on, and robots which operate them are integrated together using the boutiful IPv6 internet protocol 
+                    which allows for nearly infinite globally connected nodes. 
                         </Paper>
                 </Grid>
                 <Grid item xs={12}>
