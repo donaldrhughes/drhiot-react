@@ -50,7 +50,16 @@ const useStyles = makeStyles((theme) => ({
         marginRight: "2%",
         marginTop: "1%",
         backgroundColor: "purple"
-    }
+    },
+    footer: {
+        padding: theme.spacing(1),
+        textAlign: 'center',
+        color: "#EEE",
+        backgroundColor: "navy"
+    },
+    footLink: {
+        color: "#EEE",
+    },
 }));
 
 export default function About() {
@@ -80,14 +89,23 @@ export default function About() {
                     <Paper className={classes.header}><b>About</b></Paper>
                 </Grid>
                 <Grid item xs={12}>
-                    <Paper className={classes.bodyRow}>drhIot leverages coaching, continuous learning, 
-                    requirements gathering and advanced problem solving practices. Strong knowledge of network 
-                    infrastructures and project management methodologies. </Paper>
+                    <Paper className={classes.bodyRow}>
+                    The Internet of Things is all around us and so many technologies are now bundled within its confines. It could include your internet enabled refrigerator in the kitchen to entire cities. Automobiles, the routes they drive on, and the robots that operate them are integrated together on this technological marvel using the IPv6 internet protocol. The IPv6 protocol allows for a vast increase in the number of addresses which are available for these devices to operate independently. Some of these devices are now operating on next-generation data structures, know as blockchains. These blockchains contain immutable data security measures that make it incredibly difficult to modify the contents. This new use case for data ensures that trust is an integral part of the structure. This keeps data accurate and removes the need for centralized control.
+                        </Paper>
                 </Grid>
             </React.Fragment>
         );
     }
 
+    function FootRow() {
+        return (
+            <React.Fragment>
+                <Grid item xs={12}>
+                    <Paper className={classes.footer}>Copyright 2020, drhIoT. All Rights Reserved. Powered by the <a href="http://www.reactjs.org" className={classes.footLink}>React JS Framework.</a></Paper>
+                </Grid>
+            </React.Fragment>
+        );
+    }
     return (
         <div className={classes.root}>
             <Grid container spacing={1}>
@@ -103,7 +121,7 @@ export default function About() {
                     {/* <CardRow/> */}
                 </Grid>
                 <Grid container item xs={12} spacing={0}>
-                    {/* <FootRow /> */}
+                    <FootRow />
                 </Grid>
              
             </Grid>
