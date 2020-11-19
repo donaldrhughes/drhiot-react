@@ -99,11 +99,11 @@ export default function About() {
                 <Grid item xs={12}>
                     <Paper className={classes.bodyRow}>
                         <ul>
-                            <li>LinkedIn: https://www.linkedin.com/in/donaldrhughes/</li>
-                            <li>Github: https://github.com/donaldrhughes</li>
-                            <li>Web: https://drhiot.herokuapp.com/</li>
-                            <li>Twitter: https://twitter.com/drhiot</li>
-                            <li>Skype: donaldrhughes</li>
+                            <li><b>LinkedIn:</b> https://www.linkedin.com/in/donaldrhughes/</li>
+                            <li><b>Github:</b> https://github.com/donaldrhughes</li>
+                            <li><b>Web:</b> https://drhiot.herokuapp.com/</li>
+                            <li><b>Twitter:</b> https://twitter.com/drhiot</li>
+                            <li><b>Skype:</b> donaldrhughes</li>
                         </ul>
                     </Paper>
                 </Grid>
