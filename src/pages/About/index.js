@@ -38,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
         marginLeft: "1%",
         backgroundColor: "lightskyblue"
     },
-   
+
     nav: {
         padding: theme.spacing(1),
         textAlign: 'center',
@@ -90,8 +90,19 @@ export default function About() {
                 </Grid>
                 <Grid item xs={12}>
                     <Paper className={classes.bodyRow}>
-                    The Internet of Things is all around us and so many technologies are now bundled within its confines. It could include your internet enabled refrigerator in the kitchen to entire cities. Automobiles, the routes they drive on, and the robots that operate them are integrated together on this technological marvel using the IPv6 internet protocol. The IPv6 protocol allows for a vast increase in the number of addresses which are available for these devices to operate independently. Some of these devices are now operating on next-generation data structures, know as blockchains. These blockchains contain immutable data security measures that make it incredibly difficult to modify the contents. This new use case for data ensures that trust is an integral part of the structure. This keeps data accurate and removes the need for centralized control.
+                        The Internet of Things is all around us and so many technologies are now bundled within its confines. It could include your internet enabled refrigerator in the kitchen to entire cities. Automobiles, the routes they drive on, and the robots that operate them are integrated together on this technological marvel using the IPv6 internet protocol. The IPv6 protocol allows for a vast increase in the number of addresses which are available for these devices to operate independently. Some of these devices are now operating on next-generation data structures, know as blockchains. These blockchains contain immutable data security measures that make it incredibly difficult to modify the contents. This new use case for data ensures that trust is an integral part of the structure. This keeps data accurate and removes the need for centralized control.
                         </Paper>
+                </Grid>
+                <Grid item xs={12}>
+                    <Paper className={classes.bodyRow}>
+                        <ul>
+                            <li>LinkedIn: https://www.linkedin.com/in/donaldrhughes/</li>
+                            <li>Github: https://github.com/donaldrhughes</li>
+                            <li>Web: https://drhiot.herokuapp.com/</li>
+                            <li>Twitter: https://twitter.com/drhiot</li>
+                            <li>Skype: donaldrhughes</li>
+                        </ul>
+                    </Paper>
                 </Grid>
             </React.Fragment>
         );
@@ -123,7 +134,7 @@ export default function About() {
                 <Grid container item xs={12} spacing={0}>
                     <FootRow />
                 </Grid>
-             
+
             </Grid>
         </div>
     );
