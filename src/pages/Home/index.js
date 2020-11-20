@@ -6,11 +6,13 @@ import "./home.scss";
 //Components
 import { makeStyles } from '@material-ui/core/styles';
 import { Paper, Grid } from '@material-ui/core/';
-import Nav from '../../components/Nav'
+// import Nav from '../../components/Nav'
 import Logo from '../../components/common/Logo'
 import CA from '../../components/common/CA'
 import CA2 from '../../components/common/CA2'
-import CA3 from '../../components/common/CA3'
+import CA3 from '../../components/common/CA3';
+import AppBar from '../../components/common/AppBar';
+import TwitterIcon from '@material-ui/icons/Twitter';
 
 //Contexts
 // import { MainContext } from '../../contexts/MainContext'
@@ -26,26 +28,43 @@ const useStyles = makeStyles((theme) => ({
         color: theme.palette.text.secondary,
         marginLeft: "2%",
     },
+    logo: {
+        padding: theme.spacing(1),
+        textAlign: 'justify',
+        color: theme.palette.text.secondary,
+        marginLeft: "1%",
+    },
     bodyRow: {
         padding: theme.spacing(1),
         textAlign: 'justify',
         color: theme.palette.text.secondary,
-        marginLeft: "2%",
-        marginRight: "2%",
+        marginLeft: "1%",
+        // marginRight: "1%",
         backgroundColor: "lightsteelblue"
+    },
+    cardRow: {
+        padding: theme.spacing(1),
+        textAlign: 'justify',
+        color: theme.palette.text.secondary,
+        marginLeft: "3%",
+        // marginRight: "1%",
+        // backgroundColor: "lightsteelblue"
     },
     header: {
         textAlign: 'center',
         color: "blue",
-        marginRight: 0,
-        marginLeft: "1%",
+        marginRight: '-5px',
+        marginLeft: "5px",
         backgroundColor: "lightskyblue"
     },
     footer: {
         padding: theme.spacing(1),
         textAlign: 'center',
         color: "#EEE",
-        backgroundColor: "navy"
+        backgroundColor: "navy",
+        marginRight: '-10px',
+        marginLeft: "5px",
+        
     },
     footLink: {
         color: "#EEE",
@@ -71,14 +90,18 @@ export default function Home() {
     function FormRow() {
         return (
             <React.Fragment>
-                <Grid item xs={6}>
-                    <Logo />
+          
+                <Grid item xs={12} >
+                    <Paper className={classes.root}>
+                        <AppBar />
+                    </Paper>
                 </Grid>
-                <Grid item xs={2} >
+            
+                {/* <Grid item xs={2} >
                     <Paper className={classes.nav}>
                         <Nav />
                     </Paper>
-                </Grid>
+                </Grid> */}
                 {/* <Grid item xs={2}>
                     <Paper className={classes.paper}>Quick</Paper>
                 </Grid> */}
@@ -89,8 +112,12 @@ export default function Home() {
     function BodyRow() {
         return (
             <React.Fragment>
+              
                 <Grid item xs={12}>
-                    <Paper className={classes.header}><b>Information Technology - Specializing in Mobile Information Technology</b></Paper>
+                    <Paper className={classes.header}><b>*Specializing in Cross Platform Mobile Development</b></Paper>
+                </Grid>
+                <Grid item xs={12}>
+                <Paper className={classes.logo}><Logo /></Paper>
                 </Grid>
                 <Grid item xs={12}>
                     <Paper className={classes.bodyRow}>
@@ -100,9 +127,9 @@ export default function Home() {
                             <li> TypeScript, Cordova, Phonegap, Ionic, Regex,  Python, Angular</li>
                             <li>Object Oriented Programming, Functional Programming, Agile, BIG O(n), Authentication, SaaS, OSI, CLI, Data Structures, TDD, MVC</li>
                         </ul>
-                    
                         </Paper>
                </Grid>
+              
             </React.Fragment>
         );
     }
@@ -111,7 +138,8 @@ export default function Home() {
         return (
             <React.Fragment>
                 <Grid item xs={12}>
-                    <Paper className={classes.footer}>Copyright 2020, drhIoT. All Rights Reserved. Powered by the <a href="http://www.reactjs.org" className={classes.footLink}>React JS Framework.</a></Paper>
+                    <Paper className={classes.footer}>Copyright 2020, drhIoT. All Rights Reserved. Powered by the <a href="http://www.reactjs.org" className={classes.footLink}>React JS Framework.</a>     <TwitterIcon/> </Paper>
+               
                 </Grid>
             </React.Fragment>
         );
@@ -121,13 +149,13 @@ export default function Home() {
         return (
             <React.Fragment>
                 <Grid item xs={4} >
-                    <Paper className={classes.paper}><CA /></Paper>
+                    <Paper className={classes.cardRow}><CA /></Paper>
                 </Grid>
                 <Grid item xs={4}>
-                    <Paper className={classes.paper}><CA2 /></Paper>
+                    <Paper className={classes.cardRow}><CA2 /></Paper>
                 </Grid>
                 <Grid item xs={4}>
-                    <Paper className={classes.paper}><CA3 /></Paper>
+                    <Paper className={classes.cardRow}><CA3 /></Paper>
                 </Grid>
             </React.Fragment>
         );

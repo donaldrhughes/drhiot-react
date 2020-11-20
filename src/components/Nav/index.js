@@ -48,6 +48,8 @@ export default function Nav() {
                 <MenuItem onClick={linkPortfolio} type="submit">Portfolio</MenuItem>
                 <MenuItem onClick={linkAbout} type="submit">About</MenuItem>
             </Menu>
+
+    
         </div>
     )
 }

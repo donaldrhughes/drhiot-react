@@ -25,19 +25,20 @@ export default function LogoCard() {
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: 225,
-    textAlign: "center",
-    margin: "2%",
+    flexGrow: 1,
+    // maxWidth: 425,
+    // margin: "2%",
    
-    backgroundColor: "#DDD"
+    backgroundColor: "#999"
   },
   media: {
-    // width: 200,
-    maxWidth: 205,
+    // width: '100%',
+    maxWidth: 265,
     // minWidth: 205,
     margin: "1%",
-    height: 100,
-    padding: "1%",
+    height: 130,
+    marginLeft: '33%'
+    // padding: "1%",
     // backgroundColor: "#DDD"
   },
 });
